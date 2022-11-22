@@ -1,0 +1,13 @@
+WARNING - utils.py - 2022-11-22 13:07:41,522 - No checkpoint found at ./logs/test1/checkpoints-meta/checkpoint.pth. Returned the same state as input
+INFO - xla_bridge.py - 2022-11-22 13:07:41,528 - Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker: 
+INFO - xla_bridge.py - 2022-11-22 13:07:41,529 - Unable to initialize backend 'cuda': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+INFO - xla_bridge.py - 2022-11-22 13:07:41,529 - Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+INFO - xla_bridge.py - 2022-11-22 13:07:41,529 - Unable to initialize backend 'tpu': INVALID_ARGUMENT: TpuPlatform is not available.
+INFO - xla_bridge.py - 2022-11-22 13:07:41,529 - Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+WARNING - xla_bridge.py - 2022-11-22 13:07:41,530 - No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)
+INFO - dataset_info.py - 2022-11-22 13:07:41,531 - Load dataset info from /home/max/tensorflow_datasets/cifar10/3.0.2
+INFO - dataset_builder.py - 2022-11-22 13:07:41,540 - Reusing dataset cifar10 (/home/max/tensorflow_datasets/cifar10/3.0.2)
+INFO - dataset_builder.py - 2022-11-22 13:07:41,540 - Constructing tf.data.Dataset for split train, from /home/max/tensorflow_datasets/cifar10/3.0.2
+INFO - dataset_builder.py - 2022-11-22 13:07:41,691 - Reusing dataset cifar10 (/home/max/tensorflow_datasets/cifar10/3.0.2)
+INFO - dataset_builder.py - 2022-11-22 13:07:41,691 - Constructing tf.data.Dataset for split test, from /home/max/tensorflow_datasets/cifar10/3.0.2
+INFO - run_lib.py - 2022-11-22 13:07:41,799 - Starting training loop at step 0.
