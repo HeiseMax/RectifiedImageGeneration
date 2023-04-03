@@ -6,9 +6,9 @@ def get_default_configs():
   config = ml_collections.ConfigDict()
   # training
   config.training = training = ml_collections.ConfigDict()
-  config.training.batch_size = 16 # 128
-  training.n_iters = 13001  # 1300001
-  training.snapshot_freq = 50000
+  config.training.batch_size = 32
+  training.n_iters = 5001
+  training.snapshot_freq = 2500
   training.log_freq = 50
   training.eval_freq = 100
   ## store additional checkpoints for preemption in cloud computing environments
@@ -22,7 +22,7 @@ def get_default_configs():
   # sampling
   config.sampling = sampling = ml_collections.ConfigDict()
   sampling.n_steps_each = 1
-  sampling.noise_removal = True
+  sampling.noise_removal = False
   sampling.probability_flow = False
   sampling.snr = 0.16
   
@@ -34,23 +34,23 @@ def get_default_configs():
 
   # evaluation
   config.eval = evaluate = ml_collections.ConfigDict()
-  evaluate.begin_ckpt = 9
-  evaluate.end_ckpt = 26
-  evaluate.batch_size = 1024
+  evaluate.begin_ckpt = 0
+  evaluate.end_ckpt = 1
+  evaluate.batch_size = 128
   evaluate.enable_sampling = False
-  evaluate.num_samples = 50000
+  evaluate.num_samples = 5000
   evaluate.enable_loss = False
   evaluate.enable_bpd = False
   evaluate.bpd_dataset = 'test'
 
   # data
   config.data = data = ml_collections.ConfigDict()
-  data.dataset = 'CIFAR10'
+  data.dataset = 'MNIST'
   data.image_size = 32
-  data.random_flip = True
+  data.random_flip = False
   data.centered = False
   data.uniform_dequantization = False
-  data.num_channels = 3
+  data.num_channels = 1
 
   # model
   config.model = model = ml_collections.ConfigDict()

@@ -288,6 +288,7 @@ class NCSNpp(nn.Module):
         h = modules[m_idx](hs[-1], temb)
         #print('out shape:', h.shape)
         m_idx += 1
+        torch.cuda.empty_cache()
         if h.shape[-1] in self.attn_resolutions:
           h = modules[m_idx](h)
           m_idx += 1

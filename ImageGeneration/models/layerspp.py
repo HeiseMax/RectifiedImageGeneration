@@ -85,6 +85,7 @@ class AttnBlockpp(nn.Module):
     w = torch.reshape(w, (B, H, W, H, W))
     h = torch.einsum('bhwij,bcij->bchw', w, v)
     h = self.NIN_3(h)
+    torch.cuda.empty_cache()
     if not self.skip_rescale:
       return x + h
     else:
